@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+  <style lang="css">
+      h1, h2, h3, h4, p, body {
+          font-family: "Montserrat", sans-serif;
+          font-optical-sizing: auto;
+          font-weight: 100;
+          font-style: normal;
+      }
+      .underline-section:after{
+          content: "";
+          display: block;
+          width: 32px;
+          border-bottom: solid 3px black;
+      }
+  </style>
+</head>
+<body>
+<div class="flex">
+  <div class="w-1/3">
+    <h2 class="text-3xl font-bold underline-section">
+      DETAILS
+    </h2>
+  </div>
+  <div class="w-2/3">
+    <h2 class="text-3xl font-bold underline-section">PROFILE</h2>
+  </div>
+</div>
+</body>
+</html>
