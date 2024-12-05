@@ -15,7 +15,7 @@ var work_history = [
         company: 'Fanovit',
         date: 'jan 2019 - Dec 2019',
         role: 'Full-stack developer',
-        description: "<p>\n      Full-stack developer for around 1 year, worked on many project using PHP & Node.js.\n      </p>"
+        description: "<p>\n      Full-stack developer for around 1 year, worked on many projects using PHP & Node.js.\n      </p>"
     },
     {
         company: 'Duckraid',
