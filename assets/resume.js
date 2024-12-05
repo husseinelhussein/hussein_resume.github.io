@@ -9,13 +9,13 @@ var work_history = [
         company: 'Devvly',
         date: 'jan 2019 - Jan 2021',
         role: 'Full-stack developer',
-        description: "<p>\n      Lead developer for 4 years, took the lead on many projects, and delivered many of them from concept to completion, using PHP, Node.js, Vue.js, and Angular, and within a few months, I've helped the company gain more profit.\n      </p>"
+        description: "<p>\n      Lead developer for around 3 years, took the lead on many projects, and delivered many of them from concept to completion, using PHP, Node.js, Vue.js, and Angular, and within a few months, I've helped the company gain more profit.\n      </p>"
     },
     {
         company: 'Fanovit',
         date: 'jan 2019 - Dec 2019',
         role: 'Full-stack developer',
-        description: "<p>\n      Lead developer for 4 years, took the lead on many projects, and delivered many of them from concept to completion, using PHP, Node.js, Vue.js, and Angular, and within a few months, I've helped the company gain more profit.\n      </p>"
+        description: "<p>\n      Full-stack developer for around 1 year, worked on many project using PHP & Node.js.\n      </p>"
     },
     {
         company: 'Duckraid',
