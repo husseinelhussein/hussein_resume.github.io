@@ -41,7 +41,7 @@ const work_history: IWorkHistory[] = [
     date: 'jan 2019 - Dec 2019',
     role: 'Full-stack developer',
     description: `<p>
-      Full-stack developer for around 1 year, worked on many project using PHP & Node.js.
+      Full-stack developer for around 1 year, worked on many projects using PHP & Node.js.
       </p>`
   },
   {
