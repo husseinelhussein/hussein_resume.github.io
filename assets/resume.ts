@@ -86,10 +86,10 @@ const skills: ISkill[] = [
 
 const work_el = document.getElementById("work");
 for (let i = 0; i < work_history.length; ++i) {
-  let wrapper = document.createElement('div');
-  let title_el = document.createElement('div')
-  let date_el = document.createElement('p')
-  let description_el = document.createElement('div')
+  const wrapper = document.createElement('div');
+  const title_el = document.createElement('div')
+  const date_el = document.createElement('p')
+  const description_el = document.createElement('div')
   title_el.innerText = work_history[i].role + ', ' + work_history[i].company;
   title_el.className = 'text-lg mt-3';
   date_el.innerText = work_history[i].date;
@@ -102,15 +102,17 @@ for (let i = 0; i < work_history.length; ++i) {
 
 const skills_el = document.getElementById("skills");
 for (let i = 0; i < skills.length; ++i) {
-  let title_el = document.createElement('p')
+  const title_el = document.createElement('p')
   title_el.innerText = skills[i].title;
-  let progress_con_el = document.createElement("span")
+  const progress_con_el = document.createElement("span")
   progress_con_el.className = 'progress-con mb-4'
-  let progress_el = document.createElement("span")
+  const progress_el = document.createElement("span")
   progress_el.className = 'progress'
   progress_el.style.width = (skills[i].level * 10).toString() +  '%';
   progress_con_el.appendChild(progress_el)
   skills_el.append(title_el, progress_con_el)
 }
+
+
 
 
