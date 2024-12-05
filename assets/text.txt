@@ -1,0 +1,30 @@
+Laravel: specialist
+FastAPI: specialist
+Symfony: specialist
+Drupal: specialist
+PHPUnit framework: specialist
+Docker: specialist
+Prompt Engineering: specialist
+Stripe API: Specialist
+NodeJs: specialist
+Express JS: specialist
+GraphQL: specialist
+Apollo Server: specialist
+Svelte.js: specialist
+React Native: specialist
+ReactJs: specialist
+Ionic 2+: specialist
+Angular 5+: specialist
+Vue JS: specialist
+Tailwind: specialist
+Bootstrap: specialist
+JQuery: skilled
+Jasmine: skilled
+Mocha: skilled
+Mysql and Mongodb: skilled
+Wordpress plugin development: skilled
+Elastic Search: skilled
+AWS: skilled
+Linux command line/general management: skilled
+Redis: average
+Wordpress theming: average
