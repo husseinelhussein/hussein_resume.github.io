@@ -1,5 +1,6 @@
 interface IWorkHistory {
   company: string
+  company_url?: string
   date: string
   role: string
   description: string
@@ -8,9 +9,16 @@ interface ISkill {
   title: string
   level: number
 }
+const interests: string[] = [
+    'Music Production',
+    'Guitar',
+    'Poetry',
+    'Technology'
+]
 const work_history: IWorkHistory[] = [
   {
     company: 'Center Health',
+    company_url: 'https://duo.center.health',
     date: 'Jan 2021 – June 2024',
     role: 'Full-stack developer',
     description: `<p>
@@ -30,6 +38,7 @@ const work_history: IWorkHistory[] = [
   },
   {
     company: 'Devvly',
+    company_url: 'https://devvly.com',
     date: 'jan 2019 - Jan 2021',
     role: 'Full-stack developer',
     description: `<p>
@@ -46,6 +55,7 @@ const work_history: IWorkHistory[] = [
   },
   {
     company: 'Duckraid',
+    company_url: 'https://duckraid.com',
     date: 'jan 2019 - Jan 2019',
     role: 'Full-stack developer',
     description: `<p>Implemented the front-end and backend using Laravel (PHP), VueJS and Angular 4</p>`
@@ -87,10 +97,20 @@ const skills: ISkill[] = [
 const work_el = document.getElementById("work");
 for (let i = 0; i < work_history.length; ++i) {
   const wrapper = document.createElement('div');
+  wrapper.className = 'company-item'
   const title_el = document.createElement('div')
   const date_el = document.createElement('p')
   const description_el = document.createElement('div')
-  title_el.innerText = work_history[i].role + ', ' + work_history[i].company;
+  if (work_history[i].company_url) {
+    const href = document.createElement('a')
+    href.innerText = work_history[i].company
+    href.href = work_history[i].company_url
+    href.target = '_blank'
+    title_el.innerText = work_history[i].role + ', ';
+    title_el.appendChild(href)
+  } else {
+    title_el.innerText = work_history[i].role + ', ' + work_history[i].company;
+  }
   title_el.className = 'text-lg mt-3';
   date_el.innerText = work_history[i].date;
   date_el.className = 'mb-3';
@@ -113,6 +133,12 @@ for (let i = 0; i < skills.length; ++i) {
   skills_el.append(title_el, progress_con_el)
 }
 
+const interests_el = document.getElementById("interests");
+for (let i = 0; i < interests.length; ++i) {
+  const title_el = document.createElement('p')
+  title_el.innerText = interests[i];
+  interests_el.append(title_el)
+}
 
 
 

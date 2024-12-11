@@ -31,3 +31,13 @@ body {
     height: 8px;
     background: #333333;
 }
+
+.company-item a {
+    transition-property: all;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.company-item a:hover{
+    --tw-text-opacity: 1;
+    color: rgb(96 165 250 / var(--tw-text-opacity, 1));
+}
