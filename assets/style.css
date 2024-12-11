@@ -4,6 +4,9 @@ h1, h2, h3, h4, p, body {
     font-weight: normal;
     font-style: normal;
 }
+ul {
+    list-style: disc;
+}
 body {
     padding: 4rem;
 }
@@ -32,12 +35,12 @@ body {
     background: #333333;
 }
 
-.company-item a {
+.company-item a, .project-item a{
     transition-property: all;
     transition-duration: 300ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.company-item a:hover{
+.company-item a:hover, .project-item a:hover{
     --tw-text-opacity: 1;
     color: rgb(96 165 250 / var(--tw-text-opacity, 1));
 }

@@ -5,6 +5,12 @@ interface IWorkHistory {
   role: string
   description: string
 }
+interface IProject {
+  name: string
+  url: string,
+  date: string
+  description: string
+}
 interface ISkill {
   title: string
   level: number
@@ -61,6 +67,39 @@ const work_history: IWorkHistory[] = [
     description: `<p>Implemented the front-end and backend using Laravel (PHP), VueJS and Angular 4</p>`
   },
 ];
+
+const projects: IProject[] = [
+  {
+    name: 'Mooti',
+    url: 'https://mooti.store',
+    date: 'Nov 2024',
+    description: 'Improved Shopify store performance and SEO, fixed some bugs.',
+  },
+  {
+    name: 'BriteVue',
+    url: 'https://britevue.com',
+    date: 'Jan 2021',
+    description: 'Implemented the front-end using Vue.js.',
+  },
+  {
+    name: 'Feeds Paragraphs',
+    url: 'https://www.drupal.org/project/feeds_para_mapper',
+    date: 'Apr 2020',
+    description: 'I developed this Drupal module when i was migrating Daleel Madani platform, and still maintaining it until this day.',
+  },
+  {
+    name: 'Daleel Madani',
+    url: 'https://daleel-madani.org',
+    date: 'Jan 2019',
+    description: `
+        Along with Fanovit dev team, i migrated the platform from Drupal 5 to Drupal 8.
+        <ul class="list-disc mx-6">
+          <li>Wrote many custom modules.</li>
+          <li>Modified existing Drupal 5 modules to work with Drupal 8.</li>
+          <li>Implemented large portion of the current theme.</li>
+        </ul>`,
+  },
+]
 const skills: ISkill[] = [
   { "title": "Laravel", "level": 10 },
   { "title": "FastAPI", "level": 10 },
@@ -118,6 +157,31 @@ for (let i = 0; i < work_history.length; ++i) {
   description_el.className = 'mb-4'
   wrapper.append(title_el, date_el, description_el)
   work_el.appendChild(wrapper)
+}
+
+const projects_el = document.getElementById("projects");
+for (let i = 0; i < projects.length; ++i) {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'project-item'
+  const name_el = document.createElement('div')
+  const date_el = document.createElement('p')
+  const description_el = document.createElement('div')
+  if (projects[i].url) {
+    const href = document.createElement('a')
+    href.innerText = projects[i].name
+    href.href = projects[i].url
+    href.target = '_blank'
+    name_el.appendChild(href)
+  } else {
+    name_el.innerText = projects[i].name;
+  }
+  name_el.className = 'text-lg mt-3';
+  date_el.innerText = projects[i].date;
+  date_el.className = 'mb-3';
+  description_el.innerHTML = projects[i].description
+  description_el.className = 'mb-4'
+  wrapper.append(name_el, date_el, description_el)
+  projects_el.appendChild(wrapper)
 }
 
 const skills_el = document.getElementById("skills");
